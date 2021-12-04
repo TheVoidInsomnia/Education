@@ -1,15 +1,17 @@
-﻿using System;
-
-namespace Migrainebot
+﻿namespace Migrainebot
 {
+    /*
 
-    class Program
+        A2.12. Дано натуральное число n (n > 9). Найти:
+        а) число единиц в нем;
+        б) число десятков в нем.
+
+     */
+    class Ex2_12
     {
-        public static void Main(String[] args)
+        public static void Run()
         {
-
             
-            Ex1_19.Run();
         }
     }
 }

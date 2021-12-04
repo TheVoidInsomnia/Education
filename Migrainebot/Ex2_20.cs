@@ -1,15 +1,10 @@
-﻿using System;
-
-namespace Migrainebot
+﻿namespace Migrainebot
 {
-
-    class Program
+    class Ex2_20
     {
-        public static void Main(String[] args)
+        public static void Run()
         {
 
-            
-            Ex1_19.Run();
         }
     }
 }
