@@ -24,8 +24,11 @@ namespace Migrainebot
             switch (monthoffset)
             {
 
-                case 1: Console.WriteLine("Jan"); break;
-                case 2:Console.WriteLine("Feb");
+                case 1: 
+                    Console.WriteLine("Jan");
+                    break;
+                case 2:
+                    Console.WriteLine("Feb");
                     break;
                 case 3: Console.WriteLine("Mar");
                     break;
