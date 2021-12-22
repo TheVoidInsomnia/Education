@@ -7,7 +7,7 @@ namespace Migrainebot
     {
         public static void Main(String[] args)
         {
-            ExC1_16.Run();
+            ExC1_22.Run();
         }
     }
 }
