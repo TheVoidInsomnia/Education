@@ -10,28 +10,41 @@ namespace Migrainebot
     //Заданы площади, засеваемые пшеницей (в гектарах),
     //и средняя урожайность (в центнерах с гектара) в каждом районе.
     //Определить количество пшеницы, собранное в области, и среднюю урожайность по области.
-    internal class ExC3_25
+    internal class AreaData
+    {
+        public int productivity = 0;
+        public int square = 0;
+
+        //Произведенно в районе
+        public int production => productivity * square;
+    }
+    
+    internal class ExC3_25_alt
     {
         public static void Run()
         {
+            AreaData[] areas =
+            {
+                new AreaData() {productivity = 10, square = 15},
+                new AreaData() {productivity = 12, square = 25},
+                new AreaData() {productivity = 11, square = 7},
+                new AreaData() {productivity = 15, square = 8},
+                new AreaData() {productivity = 11, square = 20}
+            };
+
             var productivityofArea = 0.0;
             var squareofArea = 0.0;
-            int[] squares = { 15, 25, 35, 45, 55, 65, 75, 85, 90, 100 };
 
-            int[] arithmeticalMeans = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
-
-            if (arithmeticalMeans.Length != squares.Length)
+            for (int i = 0; i < areas.Length; i++)
             {
-                throw new ArgumentException("Количество площадей района, должно соотвествовать количеству урожайности районов");
-            }
-
-            for (int i = 0; i < arithmeticalMeans.Length && i < squares.Length; i++)
-            {
-                productivityofArea += arithmeticalMeans[i] * squares[i];
-                squareofArea += squares[i];
+                productivityofArea += areas[i].production;
+                squareofArea += areas[i].square;
             }
 
             double arithmeticalMean = productivityofArea / squareofArea;
+           // var area = areas.Sum(x => x.square);
+            //var total = areas.Sum(x => x.production);
+
 
             Console.WriteLine($"{productivityofArea}");
             Console.WriteLine($"{arithmeticalMean}");
